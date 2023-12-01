@@ -37,11 +37,11 @@ public class LogEntry {
     public String getElapsedTime() {
         return elapsedTime.get();
     }
-
+   // Formating for Life Cycle
     public String getLifeCycle() {
         return lifeCycle.get();
     }
-
+    // formatting for get project
     public String getProject() {
         return project.get();
     }
