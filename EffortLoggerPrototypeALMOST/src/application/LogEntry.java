@@ -4,7 +4,10 @@ import javafx.beans.property.SimpleStringProperty;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+// Class representing a log entry with details such as start time, stop time, etc.
+//code was made by me but uploaded through collegue's userid
 public class LogEntry {
+    // Properties for index, start time, stop time, elapsed time, life cycle, and project
     private final SimpleStringProperty index;
     private final LocalDateTime startTime;
     private final LocalDateTime stopTime;
@@ -12,6 +15,7 @@ public class LogEntry {
     private final SimpleStringProperty lifeCycle;
     private final SimpleStringProperty project;
 
+    // Constructor to initialize log entry with provided values
     public LogEntry(int index, LocalDateTime startTime, LocalDateTime stopTime, String elapsedTime, String lifeCycle, String project) {
         this.index = new SimpleStringProperty(String.valueOf(index));
         this.startTime = startTime;
@@ -21,7 +25,7 @@ public class LogEntry {
         this.project = new SimpleStringProperty(project);
     }
 
-    // Getters
+    // Getters for retrieving values of log entry properties
     public String getIndex() {
         return index.get();
     }
@@ -46,7 +50,7 @@ public class LogEntry {
         return project.get();
     }
 
-    // Formatters for DateTime
+    // Formatters for DateTime to retrieve formatted start and stop times
     public String getFormattedStartTime() {
         return startTime.format(DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss"));
     }
